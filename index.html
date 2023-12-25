@@ -13,6 +13,42 @@
     <link href="./static/css/main.7654fde1.css" rel="stylesheet">
 </head>
 <body>
+<!--点击火花特效-->
+<script src="static/js/mouse-click.js"></script>
+<div width="1777" height="841"
+     style="position: fixed; left: 0px; top: 0px; z-index: 2147483647; pointer-events: none;"></div>
+
+<!--鼠标特效-->
+<script type="text/javascript">
+    var a_idx = 0;
+    jQuery(document).ready(function ($) {
+        $("body").click(function (e) {
+            var a = new Array("❤玩的好累...❤", "❤再躺一会儿~❤", "❤只想躺赢❤", "❤工具人❤", "❤拒绝懒惰❤", "❤666666❤", "❤I love you❤", "❤财富还没自由！❤", "❤感觉人生已经到达了低谷❤", "❤旅游❤", "❤钓鱼❤", "❤只待晚风来❤", "❤云翳归去❤", "❤群星之光❤", "❤可以比黎明❤", "❤打游戏❤", "❤有够无聊啊你！❤", "❤结婚！❤", "❤儿孙自由儿孙福❤", "❤一壶浊酒尽余欢，今宵别梦寒❤", "❤哥们是不是演绎过摩尔庄园啊❤", "❤i try anything once❤", "❤人生苦短，何妨一试❤", "❤弱者适应环境，强者改变环境（笑❤", "❤这狗粮阁下可吃的心甘情愿？❤", "❤肉眼凡胎，岂能窥探仙人之变化❤", "❤别翻了❤", "❤你真的很无聊❤", "❤宇宙很谦虚，明明拥有一切，却叫太空❤", "❤Be kind❤", "❤Be funny❤", "❤Be smart❤", "❤Be beautiful❤", "❤And be the best version of you❤", "❤Merry Christmas!❤", "❤执子之手❤", "❤与子偕老❤", "❤感悟人生❤");
+            var $i = $("<span></span>").text(a[a_idx]);
+            a_idx = (a_idx + 1) % a.length;
+            var x = e.pageX,
+                y = e.pageY;
+            $i.css({
+                "z-index": 999999999999999999999999999999999999999999999999999999999999999999999,
+                "top": y - 20,
+                "left": x,
+                "position": "absolute",
+                "font-weight": "bold",
+                "color": "rgb(" + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + ")"
+            });
+            $("body").append($i);
+            $i.animate({
+                    "top": y - 180,
+                    "opacity": 0
+                },
+                1500,
+                function () {
+                    $i.remove();
+                });
+        });
+    });
+</script>
+    
 <noscript>You need to enable JavaScript to run this app.</noscript>
 <div id="root">
     <div class="App">
