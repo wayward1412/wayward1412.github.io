@@ -1,0 +1,98 @@
+<!--获取当前时间-->
+<!--
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+
+    function getTime(){
+        var date=new Date()
+        var dates=date.getDate()
+        var day=date.getDay()
+        var year=date.getFullYear()
+        var month=date.getMonth()+1
+        var arr=["星期天","星期一","星期二","星期三","星期四","星期五","星期六"]
+        var h=date.getHours()
+        h=h<10?'0'+h:h
+        var m=date.getMinutes()
+        m=m<10?'0'+m:m
+        var s=date.getSeconds()
+        s=s<10?'0'+s:s
+        console.log("今天是:"+year+"年"+month+"月"+dates+"日"+arr[day]+h+"时"+m+"分"+s+"秒")
+        alert("今天是:"+year+"年"+month+"月"+dates+"日"+arr[day]+h+"时"+m+"分"+s+"秒")
+        window.onload=function (){
+            t1=window.setInterval("getTime()",1000)
+        }
+    }
+getTime()
+</script>
+
+<center>
+<button type="button"onclick="getTime()"/>按钮(用来获取当前时间)
+</center>
+</body>
+</html>-->
+
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style type="text/css">
+    #clock {
+      width: 400px;
+      border: 5px solid #f00;
+      padding: 15px 10px;
+      background: #0f0;
+      margin: auto;
+      text-align: center;
+    }
+    video{
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      right: 0px;
+      bottom: 0px;
+      z-index:-99;
+    }
+  </style>
+</head>
+<div id="clock"></div>
+<body>
+<script>
+  function getTime() {
+    var date = new Date()
+    var dates = date.getDate()
+    var day = date.getDay()
+    var year = date.getFullYear()
+    var month = date.getMonth() + 1
+    var arr = ["星期天", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"]
+    var h = date.getHours()
+    h = h < 10 ? '0' + h : h
+    var m = date.getMinutes()
+    m = m < 10 ? '0' + m : m
+    var s = date.getSeconds()
+    s = s < 10 ? '0' + s : s
+    var time = ("今天是:" + year + "年" + month + "月" + dates + "日" + arr[day] + h + "时" + m + "分" + s + "秒")
+    document.getElementById("clock").innerHTML = time
+  }
+
+  window.onload = function () {
+    t1 = window.setInterval("getTime()", 1000)
+  }
+</script>
+<video autoplay loop muted src="assets/icons/ai.mp4"></video>
+</body>
+</html>

@@ -1,0 +1,47 @@
+{
+  "approved": true,
+  "contentrating": "Everyone",
+  "description": "[img]https://media.tenor.com/igoHeWItt8oAAAAd/shujinkou-bocchi-the-rock.gif[/img]\r\nThis is a Web Wallpaper Design inspired by Bocchi the Rock! I released this before episode 12 to hype myself for the upcoming episode. I will of course update the songs that will be released in the album that the producers of Bocchi have mentioned. I will also release the GitHub repo and a file that other non-steam users can download. I hope you like the wallpaper that I created and have a good year! \r\n\r\nPatch: March 19\r\nReport problems with your wallpaper in the comments!\r\n\r\nFAQ:\r\n1.) No sound when the music player is on.\r\n~If you hear clicks when using the player but no audio, the volume of the player could be at \"0\" which can be fixed by clicking on the icon that has a \"+\" symbol. If you hear no audio at all then the wallpaper engine itself is muted.\r\n\r\n2.) There are fewer functions from what I've seen from others.\r\n~If you click on the spinning setting icon on the top right corner of your monitor you can use it to pop up a navigation drop list where the functions can be turned on. \r\n\r\n3.) Music player must be turned on to play the music. It is impossible to play music without the player turned on, it is to prevent users from having a difficult time muting the song if they accidentally tabbed.\r\n\r\nChinese translation for FAQ. ~Google Translate.\r\n1.) 音乐播放器打开时没有声音。\r\n~如果您在使用播放器时听到咔嗒声但没有音频，则播放器的音量可能为“0”，可以通过单击带有“+”符号的图标来修复。如果您根本听不到任何声音，则壁纸引擎本身已静音。\r\n\r\n2.) 我从别人那里看到的功能较少。\r\n~如果您单击显示器右上角的旋转设置图标，您可以使用它弹出一个导航下拉列表，可以在其中打开这些功能。\r\n\r\n3.) 必须打开音乐播放器才能播放音乐。没有打开播放器是不可能播放音乐的，这是为了防止用户在不小心点击时很难将歌曲静音。\r\n\r\nFor Update 1.1!!\r\n-File size 32mb -> 58mb Because of new high resolution pictures.\r\n-Added 14 songs from the new released album. \r\n\r\nFor Update 1.5!!\r\n-Quick fix for visual bugs for higher resolutions.\r\n-New playlist option. \r\n\r\nFeb 14 Update:\r\nA day late but what's important is the update. :D\r\n-Added Shuffle and Replay Button.\r\n-Still no update regarding Sick Hack\r\n\r\nMarch 19 Update: (58mb -> 420 mb)\r\n-Changed mp3 audios to flac to have a better audio experience. <3\r\n-QOL fixes on the playlist scroll bar. \r\n-Added a fix for black screen problems. This will reset your previous saves on the playlist though.\r\n\r\nMarch 26 Update:\r\n-QOL Scroll bar fix.\r\n-Added Custom Volume control for UI Sounds.\r\n\r\nMay 16 Update:\r\n-Added Watashi Dake Yuurei.\r\n-Updated Playlist Scroll bugs.\r\n-Prev Button Fixed for other playlists.\r\n\r\nMay 22 Update:\r\n-Added 2 new songs from Kessoku Bando.\r\n-Reworked Playlist scroll bar.\r\n\r\nQOL changes:\r\n-Fixed input bugs even when hovered. (Provided by Joehuu)\r\n\r\nHow to change and remove visuals?\r\nYou can use the setting icon on the top right to change the visuals and other stuff it will automatically save any changes made.\r\n\r\nSteam Group Link:\r\nhttp://steamcommunity.com/groups/WE_WeebGroup\r\nGithub Link: \r\n@OriginalCube/Bocchi-Wallpaper\r\nTwitter Link: If you have questions and stuff.\r\n@originalcubee\r\n\r\nOf course, I don't own any of the artwork or music used in this wallpaper.\r\nLink of the band: [url=https://www.youtube.com/channel/UC6IhDHJbJUoRJGUPnlh5GRQ]Kessoku Band! [/url]\r\n\r\nWatashi Dake Yuurei (Cover Art by: おしり星人)\r\nPixiv: @users/2944835\r\n\r\nSpecial Thanks to \"MRKM\"!\r\nOther Works:\r\nhttps://steamcommunity.com/id/OriginalCube/myworkshopfiles/",
+  "file": "index.html",
+  "general": {
+    "properties": {
+      "schemecolor": {
+        "order": 0,
+        "text": "ui_browse_properties_scheme_color",
+        "type": "color",
+        "value": "0.9294117647058824 0.4392156862745098 0.6039215686274509"
+      },
+      "textsize": {
+        "fraction": false,
+        "index": 1,
+        "max": 20,
+        "min": 1,
+        "order": 101,
+        "text": "Text size",
+        "type": "slider",
+        "value": 10
+      },
+      "uiVolume": {
+        "fraction": false,
+        "index": 0,
+        "max": 10,
+        "min": 0,
+        "order": 100,
+        "text": "UI_Volume",
+        "type": "slider",
+        "value": 3
+      }
+    },
+    "supportsaudioprocessing": true
+  },
+  "preview": "preview.gif",
+  "tags": [
+    "Anime"
+  ],
+  "title": "Bocchi the Rock! ぼっち・ざ・ろっく！(Album)",
+  "type": "Web",
+  "version": 15,
+  "visibility": "public",
+  "workshopid": "2905017768",
+  "workshopurl": "steam://url/CommunityFilePage/2905017768"
+}

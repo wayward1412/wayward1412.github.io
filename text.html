@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Music Player</title>
+  <style>
+    /* CSS to style the page */
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #f2f2f2;
+    }
+    .controls {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .controls img {
+      margin: 0 10px;
+      cursor: pointer;
+      transition: transform 0.2s ease-in-out;
+    }
+    .controls img:hover {
+      transform: scale(1.1);
+    }
+    .controls img.active {
+      transform: scale(1.1);
+    }
+    .controls img.play {
+      display: none;
+    }
+    .controls img.pause {
+      display: block;
+    }
+    .circle {
+      position: relative;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      animation: rotate 10s linear infinite;
+    }
+    .circle img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    @keyframes rotate {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="circle">
+    <img id="album-art" src="image/goodview.jpg">
+  </div>
+  <div class="controls">
+    <img id="prev" src="image/previous.png">
+    <img id="play" class="active" src="image/play.png">
+    <img id="pause" src="image/pause.png">
+    <img id="next" src="image/next.png">
+  </div>
+</div>
+<script>
+  // JS to handle the functionality
+  const albumArt = document.getElementById('album-art');
+  const prevBtn = document.getElementById('prev');
+  const playBtn = document.getElementById('play');
+  const pauseBtn = document.getElementById('pause');
+  const nextBtn = document.getElementById('next');
+
+  let isPlaying = false;
+  let currentSong = 0;
+  const songs = ['music/ALI.mp3', '50 Ways to Say Goodbye.mp3', 'All falls down.mp3'];
+
+  function playSong() {
+    isPlaying = true;
+    playBtn.classList.remove('active');
+    pauseBtn.classList.add('active');
+    const song = new Audio(`songs/${songs[currentSong]}`);
+    song.play();
+    song.addEventListener('ended', () => {
+      isPlaying = false;
+      playBtn.classList.add('active');
+      pauseBtn.classList.remove('active');
+      currentSong++;
+      if (currentSong >= songs.length) {
+        currentSong = 0;
+      }
+      alert(`Now playing: ${songs[currentSong]}`);
+      playSong();
+    });
+  }
+
+  function pauseSong() {
+    isPlaying = false;
+    playBtn.classList.add('active');
+    pauseBtn.classList.remove('active');
+    const song = new Audio(`songs/${songs[currentSong]}`);
+    song.pause();
+  }
+
+  playBtn.addEventListener('click', () => {
+    if (!isPlaying) {
+      playSong();
+    }
+  });
+
+  pauseBtn.addEventListener('click', () => {
+    if (isPlaying) {
+      pauseSong();
+    }
+  });
+
+  prevBtn.addEventListener('click', () => {
+    currentSong--;
+    if (currentSong < 0) {
+      currentSong = songs.length - 1;
+    }
+    alert(`Now playing: ${songs[currentSong]}`);
+    if (isPlaying) {
+      pauseSong();
+      playSong();
+    } else {
+      albumArt.src = `album-art/${songs[currentSong].replace('.mp3', '.jpg')}`;
+    }
+  });
+
+  nextBtn.addEventListener('click', () => {
+    currentSong++;
+    if (currentSong >= songs.length) {
+      currentSong = 0;
+    }
+    alert(`Now playing: ${songs[currentSong]}`);
+    if (isPlaying) {
+      pauseSong();
+      playSong();
+    } else {
+      albumArt.src = `album-art/${songs[currentSong].replace('.mp3', '.jpg')}`;
+    }
+  });
+</script>
+</body>
+</html>

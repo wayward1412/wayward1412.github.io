@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>下拉导航菜单的制作</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 微软雅黑
+        }
+
+        h3 {
+            text-align: center;
+            color: #f60;
+            margin: auto;
+        }
+
+        ul {
+            list-style: none
+        }
+
+        nav {
+            height: 40px;
+            margin: 0 auto;
+            background-color: #3498DB;
+            text-align: center
+        }
+
+        .main {
+            display: flex;
+            justify-content: center
+        }
+
+        .main li {
+            margin: 0
+        }
+
+        .main li a {
+            width: 100px;
+            height: 40px;
+            border-left: 2px;
+            solid-color: #666FFF
+        }
+
+
+        a {
+            text-decoration: none;
+            color: #cccccc;
+            text-transform: capitalize;
+            display: block;
+            padding: 10px 15px;
+            font-size: 16px;
+            transition: background-color 0.5s ease-in-out;
+        }
+
+        a:hover {
+            background-color: #631818;
+
+        }
+
+        .drop li {
+            opacity: 0;
+            transform-origin: top center
+        }
+
+        .drop li a {
+            background-color: #ea5b5b;
+            padding: 10px 0;
+            margin-bottom: 1px;
+            width: 98px;
+        }
+
+        /* ----------------下拉动画---------------- */
+        .main li:hover .drop li:first-of-type {
+            animation: drop 0.3s ease-in-out forwards;
+            animation-delay: 0.2s;
+        }
+
+        .main li:hover .drop li:nth-of-type(2) {
+            animation: drop 0.3s ease-in-out forwards;
+            animation-delay: 0.4s;
+        }
+
+        .main li:hover .drop li:nth-of-type(3) {
+            animation: drop 0.3s ease-in-out forwards;
+            animation-delay: 0.6s;
+        }
+
+        .main li:hover .drop li:last-of-type {
+            animation: drop 0.3s ease-in-out forwards;
+            animation-delay: 0.8s;
+
+        }
+
+        @keyframes drop {
+            0% {
+                opacity: 0;
+                transform: scale(2);
+
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .fixedd {
+            width: 20px;
+            height: 20px;
+            font-size: 14px;
+            margin-left: 500px;
+
+        }
+
+
+        .image2 {
+
+            opacity: 50;
+            width: 25px;
+            height: 25px;
+            margin-left: 0px;
+            margin-top: 8px;
+
+        }
+
+        .container {
+            display: flex;
+        / / flex-direction: column;
+            align-items: normal;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            font-size: 18px;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+            text-align: center;
+            margin-top: -50px;
+            background-color: rgba(255, 255, 255, 0.8);
+            width: 300px;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+            background-color: #4285F4;
+            color: #fff;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+
+<h3>My Website</h3>
+<nav>
+    <ul class="main">
+
+
+        <li><a href="#">首页</a>
+            <ul class="drop">
+                <li><a href="https://xxxxx520.cam/">游戏网站</a></li>
+                <li><a href="https://toolb.cn/">软件网站</a></li>
+                <li><a href="https://www.bilibili.com/">视频网站</a></li>
+                <li><a href="https://www.runoob.com/">学习网站</a></li>
+            </ul>
+        </li>
+
+
+        <li><a href="#">搜索页</a>
+            <ul class="drop">
+                <li><a href="#">招贤纳士</a></li>
+                <li><a href="#">业界资讯</a></li>
+                <li><a href="#">技术支持</a></li>
+                <li><a href="#">关于我们</a></li>
+            </ul>
+        </li>
+
+
+        <li><a href="#">支持服务</a>
+            <ul class="drop">
+                <li><a href="#">招贤纳士</a></li>
+                <li><a href="#">业界资讯</a></li>
+                <li><a href="#">技术支持</a></li>
+                <li><a href="#">关于我们</a></li>
+            </ul>
+        </li>
+
+        <li><a href="#">招纳贤士</a>
+            <ul class="drop">
+                <li><a href="#">招贤纳士</a></li>
+                <li><a href="#">业界资讯</a></li>
+                <li><a href="#">技术支持</a></li>
+                <li><a href="#">关于我们</a></li>
+            </ul>
+        </li>
+
+        <li><a href="#">团队建设</a>
+            <ul class="drop">
+                <li><a href="#">招贤纳士</a></li>
+                <li><a href="#">业界资讯</a></li>
+                <li><a href="#">技术支持</a></li>
+                <li><a href="#">关于我们</a></li>
+            </ul>
+        </li>
+
+        <li><a href="#">关于我们</a>
+            <ul class="drop">
+                <li><a href="#">招贤纳士</a></li>
+                <li><a href="#">业界资讯</a></li>
+                <li><a href="#">技术支持</a></li>
+                <li><a href="#">关于我们</a></li>
+            </ul>
+        </li>
+
+        <div class="drop1">
+            <li>
+                <a href="#" id=""><p id="p1">用户登录</p><!--<img src="image/guest.png" class="image2" id="image2"/>-->
+                </a>
+            </li>
+        </div>
+
+        <div class="drop2">
+            <li>
+                <a href="#"><p id="p2">搜索</p><!--<img src="image/search.png" id="image111" class="fixedd">--></a>
+            </li>
+        </div>
+
+    </ul>
+
+    <!--搜索框-->
+    <div class="container">
+        <form id="search-form">
+            <input type="text" id="search-input" placeholder="搜索" style="display: none">
+            <input type="submit" value="搜索" style="display: none" id="submit1">
+        </form>
+    </div>
+
+</nav>
+
+
+<script>
+    const form = document.getElementById('search-form');
+    const input = document.getElementById('search-input');
+    const submit1 = document.getElementById('submit1');
+
+    var p2 = document.getElementById("p2")
+
+    p2.onclick = function () {
+        if (input.style.display == "none") {
+            input.style.display = ""
+            submit1.style.display = ""
+        }
+    }
+
+
+    //此代码将事件侦听器添加到侦听提交事件的表单元素。 随便扒 哼！！！
+    form.addEventListener('submit', (event) => {
+        // 此行阻止默认表单提交行为。
+        event.preventDefault();
+
+        // 此行获取输入元素的值。
+        const query = input.value;
+
+        // 此行将当前窗口的 URL 设置为百度搜索查询值。
+        window.location.href = `https://www.baidu.com/s?wd=${query}`;
+    });
+
+    var p1 = document.getElementById("p1")
+    p1.onclick = function () {
+        const username = prompt('请输入用户名');
+        const password = prompt('请输入密码');
+        if (username === 'admin' && password === '123456') {
+            // 登录成功，显示文字并跳转到百度
+            alert('登录成功');
+            window.location.href = 'https://www.baidu.com';
+        } else {
+            // 登录失败，提示错误信息
+            alert('用户名或密码错误');
+        }
+
+    }
+
+
+</script>
+
+</body>
+</html>

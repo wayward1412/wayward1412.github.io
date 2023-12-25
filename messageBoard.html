@@ -1,0 +1,280 @@
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>留言板</title>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    form {
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      max-width: 500px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      color: #666;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      margin-bottom: 20px;
+      box-sizing: border-box;
+    }
+    input[type="submit"], input[type="reset"] {
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+    input[type="submit"]:hover, input[type="reset"]:hover {
+      background-color: #3e8e41;
+    }
+    table {
+      margin: 20px auto;
+      border-collapse: collapse;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      max-width: 500px;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    th {
+      background-color: #4CAF50;
+      color: #fff;
+    }
+    .export-btn {
+      background-color: #008CBA;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    .export-btn:hover {
+      background-color: #006080;
+    }
+  </style>
+</head>
+<body>
+<h1>留言板</h1>
+<form>
+  <label for="message">留言:</label>
+  <input type="text" id="message" name="message">
+  <input type="submit" value="提交" onclick="addMessage()">
+  <input type="reset" value="重置">
+</form>
+<table id="messageTable">
+  <tr>
+    <th>留言</th>
+    <th>时间</th>
+  </tr>
+</table>
+<button class="export-btn" onclick="exportTable()">导出留言</button>
+<script>
+  // 获取留言表格
+  var messageTable = document.getElementById("messageTable");
+
+  // 添加留言到表格
+  function addMessage() {
+    // 获取留言内容
+    var messageInput = document.getElementById("message");
+    var message = messageInput.value;
+
+    // 创建新行
+    var row = messageTable.insertRow(1);
+
+    // 创建单元格
+    var messageCell = row.insertCell(0);
+    var timeCell = row.insertCell(1);
+
+    // 添加内容到单元格
+    messageCell.innerHTML = message;
+    timeCell.innerHTML = new Date().toLocaleString();
+
+    // 重置输入框
+    messageInput.value = "";
+  }
+
+  // 导出留言表格为txt文件
+  function exportTable() {
+    // 获取表格内容
+    var table = messageTable.outerHTML;
+
+    // 替换表格标签
+    table = table.replace(/<table[^>]*>/g, '');
+    table = table.replace(/<\/table>/g, '');
+
+    // 替换行标签
+    table = table.replace(/<tr[^>]*>/g, '');
+    table = table.replace(/<\/tr>/g, '\r\n');
+
+    // 替换列标签
+    table = table.replace(/<td[^>]*>/g, '');
+    table = table.replace(/<\/td>/g, '\t');
+
+    // 创建下载链接
+    var link = document.createElement("a");
+    link.download = "messages.txt";
+    link.href = "data:text/plain;charset=utf-8," + encodeURIComponent(table);
+    link.click();
+  }
+
+  // 自动刷新页面
+  setInterval(function() {
+    location.reload();
+  }, 10000);
+</script>
+</body>
+</html>
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>留言板</title>
+  <meta charset="UTF-8">
+  <style>
+    /* 美化留言表格 */
+    table {
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 1.2em;
+      min-width: 400px;
+      border-radius: 5px 5px 0 0;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    }
+
+    table thead tr {
+      background-color: #009879;
+      color: #ffffff;
+      text-align: left;
+      font-weight: bold;
+    }
+
+    table th,
+    table td {
+      padding: 12px 15px;
+    }
+
+    table tbody tr {
+      border-bottom: 1px solid #dddddd;
+    }
+
+    table tbody tr:nth-of-type(even) {
+      background-color: #f3f3f3;
+    }
+
+    table tbody tr:last-of-type {
+      border-bottom: 2px solid #009879;
+    }
+
+    /* 美化按钮 */
+    button {
+      background-color: #009879;
+      color: #ffffff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+
+    button:hover {
+      background-color: #007c6d;
+    }
+
+    /* 美化输入框 */
+    input[type=text] {
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      margin-right: 10px;
+      width: 300px;
+    }
+  </style>
+</head>
+<body>
+<!-- 留言输入框 -->
+<input type="text" id="message-input" placeholder="请输入留言">
+<!-- 重置输入框按钮 -->
+<button id="reset-button">重置</button>
+<!-- 提交留言按钮 -->
+<button id="submit-button">提交</button>
+<!-- 留言表格 -->
+<table id="message-table">
+  <thead>
+  <tr>
+    <th>留言</th>
+  </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+<!-- 导出留言按钮 -->
+<button id="export-button">导出留言</button>
+
+<script>
+  // 获取DOM元素
+  const messageInput = document.getElementById('message-input');
+  const resetButton = document.getElementById('reset-button');
+  const submitButton = document.getElementById('submit-button');
+  const messageTable = document.getElementById('message-table');
+  const exportButton = document.getElementById('export-button');
+
+  // 重置输入框
+  resetButton.addEventListener('click', () => {
+    messageInput.value = '';
+  });
+
+  // 提交留言
+  submitButton.addEventListener('click', () => {
+    // 获取留言内容
+    const message = messageInput.value;
+    // 创建新行
+    const newRow = messageTable.insertRow();
+    // 创建新单元格
+    const newCell = newRow.insertCell();
+    // 添加留言内容到单元格
+    newCell.innerHTML = message;
+    // 清空输入框
+    messageInput.value = '';
+  });
+
+  // 导出留言
+  exportButton.addEventListener('click', () => {
+    // 获取所有留言
+    const messages = Array.from(messageTable.querySelectorAll('td')).map(td => td.innerHTML);
+    // 将留言转换为文本
+    const text = messages.join('\n');
+    // 创建下载链接
+    const link = document.createElement('a');
+    link.download = 'messages.txt';
+    link.href = 'data:text/plain;charset=utf-8,' + encodeURIComponent(text);
+    link.click();
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<!-- saved from url=(0080)file:///D:/tencent/steam/steamapps/workshop/content/431960/2905017768/index.html -->
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <link rel="icon" type="image/jpg"
+          href="./assets/icons/preview.jpg">
+    <meta name="description" content="Web site created using create-react-app">
+    <title>Music Player</title>
+    <script defer="defer" src="./static/js/main.0075b191.js"></script>
+    <link href="./static/css/main.7654fde1.css" rel="stylesheet">
+</head>
+<body>
+<noscript>You need to enable JavaScript to run this app.</noscript>
+<div id="root">
+    <div class="App">
+        <div class="Main" style="background-color: rgb(76, 38, 51);">
+            <canvas class="mainCanvas" width="604" height="143"></canvas>
+            <img class="mainImage" src="./assets/icons/AlbumCover_-169325898.jpg" alt=""
+                 style="box-shadow: rgb(21, 6, 37) 1px 1px 12px;">
+            <div>
+                <div class="optionBar"><img src="./assets/icons/darkclock.png" alt=""
+                                            class="optionIcon opacity-70"><img
+                        src="./assets/icons/darksound.png" alt="" class="optionIcon" style="top: 7.5%;"><img
+                        src="./assets/icons/darkbackground.png" alt="" class="optionIcon opacity-90"
+                        style="top: 15%;"><img src="./assets/icons/darkheadphones.png" alt=""
+                                               class="optionIcon opacity-90" style="top: 22.5%;"><img
+                        src="./assets/icons/playlist.png" alt="" class="optionIcon opacity-80"
+                        style="top: 29%;"></div>
+                <img src="./assets/icons/darksetting.png" width="5vh" height="5vh"
+                     class="navigation opacity-70" alt=""></div>
+            <div class="playlist"
+                 style="font-size: 1rem; border: 4.5px solid rgba(237, 112, 154, 0.9); box-shadow: rgb(21, 6, 37) 1px 1px 6px;">
+                <div class="playlistNavigation" style="height: 10%;">
+                    <button class="h-full w-1/3"
+                            style="text-shadow: rgba(237, 112, 154, 0.7) 2px 2px; border-bottom: 3px solid rgba(237, 112, 154, 0.9); border-right: 3px solid rgba(237, 112, 154, 0.9);">
+                        Default
+                    </button>
+                    <button class="h-full w-1/3"
+                            style="text-shadow: rgba(237, 112, 154, 0.7) 2px 2px; border-bottom: 3px solid rgba(237, 112, 154, 0.9); border-right: 3px solid rgba(237, 112, 154, 0.9);">
+                        Playlist 1
+                    </button>
+                    <button class="w-1/3 h-full"
+                            style="text-shadow: rgba(237, 112, 154, 0.7) 2px 2px; border-bottom: 3px solid rgba(237, 112, 154, 0.9);">
+                        Playlist 2
+                    </button>
+                </div>
+
+                <div class="playlist-container" style="height: 80%;">
+                    <div class="playlist-item-container">
+                        <div class="playlist-item"><p
+                                style="opacity: 0.85; border-bottom: 3px solid rgba(237, 112, 154, 0.9); text-shadow: rgba(237, 112, 154, 0.7) 2px 2px;">
+                            1. Daisy</p></div>
+                        <div class="playlist-item"><p
+                                style="opacity: 0.85; border-bottom: 3px solid rgba(237, 112, 154, 0.9); text-shadow: rgba(237, 112, 154, 0.7) 2px 2px;">
+                            2. Away with me</p></div>
+                        <div class="playlist-item"><p
+                                style="opacity: 0.85; border-bottom: 3px solid rgba(237, 112, 154, 0.9); text-shadow: rgba(237, 112, 154, 0.7) 2px 2px;">
+                            3. Hakuka</p></div>
+                        <div class="playlist-item"><p
+                                style="opacity: 0.85; border-bottom: 3px solid rgba(237, 112, 154, 0.9); text-shadow: rgba(237, 112, 154, 0.7) 2px 2px;">
+                            4. i will be there for you</p></div>
+                        <div class="playlist-item"><p
+                                style="opacity: 0.85; border-bottom: 3px solid rgba(237, 112, 154, 0.9); text-shadow: rgba(237, 112, 154, 0.7) 2px 2px;">
+                            5. LOSER</p></div>
+                        <div class="playlist-item"><p
+                                style="opacity: 0.85; border-bottom: 3px solid rgba(237, 112, 154, 0.9); text-shadow: rgba(237, 112, 154, 0.7) 2px 2px;">
+                            6. Not Angry</p></div>
+                        <div class="playlist-item"><p
+                                style="opacity: 0.85; border-bottom: 3px solid rgba(237, 112, 154, 0.9); text-shadow: rgba(237, 112, 154, 0.7) 2px 2px;">
+                            7. REVIVER</p></div>
+                        <div class="playlist-item"><p
+                                style="opacity: 0.85; border-bottom: 3px solid rgba(237, 112, 154, 0.9); text-shadow: rgba(237, 112, 154, 0.7) 2px 2px;">
+                            8. 假面舞会</p></div>
+                        <div class="playlist-item"><p
+                                style="opacity: 0.85; border-bottom: 3px solid rgba(237, 112, 154, 0.9); text-shadow: rgba(237, 112, 154, 0.7) 2px 2px;">
+                            9. 偶像</p></div>
+                        <div class="playlist-item"><p
+                                style="opacity: 0.85; border-bottom: 3px solid rgba(237, 112, 154, 0.9); text-shadow: rgba(237, 112, 154, 0.7) 2px 2px;">
+                            10. 只要多一点</p></div>
+                        <div class="playlist-item"><p
+                                style="opacity: 0.85; border-bottom: 3px solid rgba(237, 112, 154, 0.9); text-shadow: rgba(237, 112, 154, 0.7) 2px 2px;">
+                            11. 向夜晚奔去</p></div>
+                        <div class="playlist-item"><p
+                                style="opacity: 0.85; border-bottom: 3px solid rgba(237, 112, 154, 0.9); text-shadow: rgba(237, 112, 154, 0.7) 2px 2px;">
+                            12. 快乐的扑满</p></div>
+                        <div class="playlist-item"><p
+                                style="opacity: 0.85; border-bottom: 3px solid rgba(237, 112, 154, 0.9); text-shadow: rgba(237, 112, 154, 0.7) 2px 2px;">
+                            13. 怪物</p></div>
+                        <div class="playlist-item"><p
+                                style="opacity: 0.85; border-bottom: 3px solid rgba(237, 112, 154, 0.9); text-shadow: rgba(237, 112, 154, 0.7) 2px 2px;">
+                            14. 恋dance</p></div>
+                        <div class="playlist-item"><p
+                                style="opacity: 0.85; border-bottom: 3px solid rgba(237, 112, 154, 0.9); text-shadow: rgba(237, 112, 154, 0.7) 2px 2px;">
+                            15. 温柔的彗星</p></div>
+                        <div class="playlist-item"><p
+                                style="opacity: 0.85; border-bottom: 3px solid rgba(237, 112, 154, 0.9); text-shadow: rgba(237, 112, 154, 0.7) 2px 2px;">
+                            16. 游戏</p></div>
+                        <div class="playlist-item"><p
+                                style="opacity: 0.85; border-bottom: 3px solid rgba(237, 112, 154, 0.9); text-shadow: rgba(237, 112, 154, 0.7) 2px 2px;">
+                            17. 琥珀色的街道</p></div>
+                        <div class="playlist-item"><p
+                                style="opacity: 0.85; border-bottom: 3px solid rgba(237, 112, 154, 0.9); text-shadow: rgba(237, 112, 154, 0.7) 2px 2px;">
+                            18. 白月初你到底行不行</p></div>
+                        <div class="playlist-item"><p
+                                style="opacity: 0.85; border-bottom: 3px solid rgba(237, 112, 154, 0.9); text-shadow: rgba(237, 112, 154, 0.7) 2px 2px;">
+                            19. 神的随波逐流</p></div>
+                        <div class="playlist-item"><p
+                                style="opacity: 0.85; border-bottom: 3px solid rgba(237, 112, 154, 0.9); text-shadow: rgba(237, 112, 154, 0.7) 2px 2px;">
+                            20. 给你呀</p></div>
+
+
+
+                    </div>
+                    <div class="playlist-sroll" style="border: 2px solid rgba(237, 112, 154, 0.9);">
+                        <div class="playlist-scroll-img" style="top: 12%;"><img src="./assets/icons/upBar.png"
+                                                                                alt=""></div>
+                        <div class="playlist-scroll-img" style="bottom: 10%;"><img
+                                src="./assets/icons/downBar.png" alt=""></div>
+                    </div>
+                </div>
+                <div class="playlistNavigation"
+                     style="height: 10%; border-top: 4.5px solid rgba(237, 112, 154, 0.9); position: relative;">
+                    <button class="w-1/2 h-full"
+                            style="text-shadow: rgba(237, 112, 154, 0.7) 2px 2px; border-right: 3px solid rgba(237, 112, 154, 0.9); height: 100%;">
+                        Playlist 1
+                    </button>
+                    <button class="w-1/2 h-full" style="text-shadow: rgba(237, 112, 154, 0.7) 2px 2px;">Playlist 2
+                    </button>
+                </div>
+            </div>
+            <p class="mainClock absolute opacity-80"
+               style="font-size: 8rem; top: 79vh; right: 2vw; color: white; text-shadow: rgba(237, 112, 154, 0.7) 3px 3px;">
+                <font _mstmutation="1"><font _mstmutation="1">5:</font><font _mstmutation="1">07</font></font><span
+                    class="mainSecond relative top-2/3" style="font-size: 1.875rem; color: white;">41</span></p>
+            <div class="player">
+                <div class="h-full w-full flex-col">
+                    <div class="w-full" style="height: 30%;"><p class="playerText"
+                                                                style="text-shadow: rgba(237, 112, 154, 0.7) 2px 2px; font-size: 1.25rem;">
+                        Guitar, Loneliness and Blue Planet</p></div>
+                    <div class="w-full flex items-center justify-center" style="height: 25%;"><input type="range"
+                                                                                                     step="1" min="0"
+                                                                                                     max="228.96"
+                                                                                                     class="audio-progress"
+                                                                                                     value="14.709414">
+                    </div>
+                    <div class="flex items-center justify-evenly" style="height: 45%;"><img class="audioIcon" alt=""
+                                                                                            src="./assets/icons/replayToggle.png"
+                                                                                            style="margin-left: 0%; opacity: 0.85;"><img
+                            class="audioIcon" alt="" src="./assets/icons/volumeMinus.png"><img
+                            class="audioIcon" alt="" src="./assets/icons/backward.png"><img class="audioIcon"
+                                                                                            alt=""
+                                                                                            src="./assets/icons/play.png"><img
+                            class="audioIcon" alt="" src="./assets/icons/forward.png"><img class="audioIcon"
+                                                                                           alt=""
+                                                                                           src="./assets/icons/volumePlus.png"><img
+                            class="audioIcon" alt="" src="./assets/icons/shuffle.png" style="opacity: 0.85;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
